@@ -3,10 +3,10 @@ import '../../css/layout/header.css'
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
-import { useNavigate } from "react-router-dom";
-import sky_img from '../../images/sky_view.jpg';
+import sky_img from '../../images/header/sky_view.jpg';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
-import london_eye_img from '../../images/london_eye_view.jpg';
+import london_eye_img from '../../images/header/london_eye_view.jpg';
+import city_view from '../../images/header/city_view.jpg';
 
 export const Header = () => {
 
@@ -86,84 +86,85 @@ export const Header = () => {
           id="menu_close_btn"
           className="menu_close_btn close"
         >
-          &#10005;
+          <b>&#10005;</b>
         </div>
  
         <div className="menu_wrapper">
-          <div className={`${menuClass[0]} menu`}>
-            <img src={london_eye_img} />
-            <div
-              onClick={closeMenu}
-              onMouseEnter={handleElHover}
-              onMouseLeave={handleElLeave}
-              className="overlay"
-            >
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                isActive ? "nav_active" : "nav_pending"
-              }>
+
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+            isActive ? "nav_active" : "nav_pending"
+          }>
+            <div className={`${menuClass[0]} menu`}>
+              <img src={sky_img} />
+              <div
+                onClick={closeMenu}
+                onMouseEnter={handleElHover}
+                onMouseLeave={handleElLeave}
+                className="overlay"
+              >
                 <b>Top</b>
-              </NavLink>
+              </div>
             </div>
-          </div>
+          </NavLink>
 
-          <div className={`${menuClass[1]} menu`}>
-            <img src={london_eye_img} />
-            <div
-              onClick={closeMenu}
-              onMouseEnter={handleElHover}
-              onMouseLeave={handleElLeave}
-              className="overlay"
-            >
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                isActive ? "nav_active" : "nav_pending"
-              }>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+            isActive ? "nav_active" : "nav_pending"
+          }>
+            <div className={`${menuClass[1]} menu`}>
+              <img src={city_view} />
+              <div
+                onClick={closeMenu}
+                onMouseEnter={handleElHover}
+                onMouseLeave={handleElLeave}
+                className="overlay"
+              >
                 <b>About</b>
-              </NavLink>
+              </div>
             </div>
-          </div>
+          </NavLink>
 
-          <div className={`${menuClass[2]} menu`}>
-            <video autoPlay loop muted >
-              <source src={portfolio_movie} type="video/mp4" />
-              <p>Your browser doesn't support HTML5 video.</p>
-            </video>
-            <div
-              onClick={closeMenu}
-              onMouseEnter={handleElHover}
-              onMouseLeave={handleElLeave}
-              className="overlay"
-            >
-              <NavLink
-                to="/work"
-                className={({ isActive }) =>
-                isActive ? "nav_active" : "nav_pending"
-              }>
+          <NavLink
+            to="/work"
+            className={({ isActive }) =>
+            isActive ? "nav_active" : "nav_pending"
+          }>
+            <div className={`${menuClass[2]} menu`}>
+              <video autoPlay loop muted >
+                <source src={portfolio_movie} type="video/mp4" />
+                <p>Your browser doesn't support HTML5 video.</p>
+              </video>
+              <div
+                onClick={closeMenu}
+                onMouseEnter={handleElHover}
+                onMouseLeave={handleElLeave}
+                className="overlay"
+              >
                 <b>Work</b>
-              </NavLink>
+              </div>
             </div>
-          </div>
+          </NavLink>
 
-          <div className={`${menuClass[3]} menu`}>
-            <img src={sky_img} />
-            <div
-              onClick={closeMenu}
-              onMouseEnter={handleElHover}
-              onMouseLeave={handleElLeave}
-              className="overlay"
-            >
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                isActive ? "nav_active" : "nav_pending"
-              }>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+            isActive ? "nav_active" : "nav_pending"
+          }>
+            <div className={`${menuClass[3]} menu`}>
+              <img src={london_eye_img} />
+              <div
+                onClick={closeMenu}
+                onMouseEnter={handleElHover}
+                onMouseLeave={handleElLeave}
+                className="overlay"
+              >
                 <b>Contact</b>
-              </NavLink>
+              </div>
             </div>
-          </div>
+          </NavLink>
 
         </div>
       </div>

@@ -1,7 +1,37 @@
+import { useState } from 'react';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
-import '../../css/work/work.css'
+import { handleElHover, handleElLeave } from "../cursor/Cursor";
+import '../../css/work/work.css';
+import heritage from '../../images/work/heritage.jpg';
+import london_city_1 from '../../images/work/london_city_1.jpg';
+import london_city_2 from '../../images/work/london_city_2.jpg';
+import sunset from '../../images/work/sunset.jpg';
+import valletta from '../../images/work/valletta.jpg';
+import tokyo_human from '../../images/work/tokyo_human.jpg';
+import tokyo_view from '../../images/work/tokyo_view.jpg';
+import rclothes from '../../images/work/rclothes.png';
+import sharebuy from '../../images/work/sharebuy.png';
+import portfolio_2021 from '../../images/work/portfolio_2021.png';
 
 export const Work = () => {
+  const [workClass, setWorkClass] = useState<string>();
+
+  const openWork = (col: string) => {
+    const workContent = document.getElementById(col);
+    if(workContent) {
+      workContent.classList.remove("close");
+      workContent.classList.add("work");
+    }
+  }
+
+  const closeWork = (col: string) => {
+    const workContent = document.getElementById(col);
+    if(workContent) {
+      workContent.classList.remove("work");
+      workContent.classList.add("close");
+    }
+  }
+
   return(
     <div className='work_container'>
 
@@ -11,20 +41,145 @@ export const Work = () => {
         </h2>
       </div>
 
-      <div className='video_container'>
-        <div className='video_wrapper'>
-          <video autoPlay loop muted >
-            <source src={portfolio_movie} type="video/mp4" />
-            <p>Your browser doesn't support HTML5 video.</p>
-          </video>
+      <div className='work_wrapper'>
+
+        <div id="work_1" className="close work_1">
+          <img src={london_city_1} />
         </div>
+
+        <div id="work_2" className="close work_2">
+          <img src={heritage} />
+        </div>
+
+        <div id="work_3" className="close work_3">
+          <img src={sharebuy} />
+        </div>
+
+        <div id="work_4" className="close work_4">
+          <img src={sunset} />
+        </div>
+
+        <div id="work_5" className="close work_5">
+          <div className='video_wrapper'>
+            <video autoPlay loop muted >
+              <source src={portfolio_movie} type="video/mp4" />
+              <p>Your browser doesn't support HTML5 video.</p>
+            </video>
+          </div>
+        </div>
+
+        <div id="work_6" className="close work_6">
+          <img src={london_city_2} />
+        </div>
+
+        <div id="work_7" className="close work_7">
+          <img src={portfolio_2021} />
+        </div>
+
+        <div id="work_8" className="close work_8">
+          <img src={valletta} />
+        </div>
+
+        <div id="work_9" className="close work_9">
+          <img src={rclothes} />
+        </div>
+
+        <div id="work_10" className="close work_10">
+          <img src={tokyo_view} />
+        </div>
+
       </div>
 
-      <div>
-        <div>
+      <div className='col_wrapper'>
 
+        <div
+          onMouseEnter={() => openWork("work_1")}
+          onMouseLeave={() => closeWork("work_1")}
+          className='col col_1'
+        >
         </div>
+
+        <div
+          onMouseEnter={() => openWork("work_2")}
+          onMouseLeave={() => closeWork("work_2")}
+          className='col col_2'
+        >
+        </div>
+
+        <div
+          onMouseEnter={() => openWork("work_3")}
+          onMouseLeave={() => closeWork("work_3")}
+          className='col col_3'
+        >
+        </div>
+
+        <div
+          onMouseEnter={() => openWork("work_4")}
+          onMouseLeave={() => closeWork("work_4")}
+          className='col col_4'
+        >
+        </div>
+
+        <div
+          onMouseEnter={() => openWork("work_5")}
+          onMouseLeave={() => closeWork("work_5")}
+          className='col col_5'>
+        </div>
+        
+        <div
+          onMouseEnter={() => openWork("work_6")}
+          onMouseLeave={() => closeWork("work_6")}
+          className='col col_6'
+        >
+        </div>
+
+        <div
+          onMouseEnter={() => openWork("work_7")}
+          onMouseLeave={() => closeWork("work_7")}
+          className='col col_7'
+        >
+        </div>
+        
+        <div 
+          onMouseEnter={() => openWork("work_8")}
+          onMouseLeave={() => closeWork("work_8")}
+          className='col col_8'
+        >
+        </div>
+        
+        <div
+          onMouseEnter={() => openWork("work_9")}
+          onMouseLeave={() => closeWork("work_9")}
+          className='col col_9'
+        >
+        </div>
+
+        <div
+          onMouseEnter={() => openWork("work_10")}
+          onMouseLeave={() => closeWork("work_10")}
+          className='col col_10'
+        >
+        </div>
+
       </div>
+
+      <div className='work_title_wrapper'>
+        <h1 
+          onMouseEnter={handleElHover}
+          onMouseLeave={handleElLeave}
+          className='work_title'
+        >
+          Work.
+        </h1>
+        <p
+          onMouseEnter={handleElHover}
+          onMouseLeave={handleElLeave}
+          className='work_text'
+        >
+          Move cursor
+        </p>
+      </div>
+
     </div>
   );
 }

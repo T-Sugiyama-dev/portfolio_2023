@@ -30,7 +30,7 @@ export const About = () => {
           <p
             onMouseEnter={handleElHover}
             onMouseLeave={handleElLeave}
-            className="about_text"
+            className="about_text about_tag"
           >
             #Software engineer #Designer #Photographer #Videographer
           </p>

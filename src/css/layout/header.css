@@ -12,7 +12,7 @@
   width: 90%;
   display: flex;
   justify-content: space-between;
-  margin: 20px 10px;
+  margin: 30px 10px;
   position: relative;
 }
 
@@ -30,7 +30,7 @@
   color: #ffffff;
 }
 
-.nav_active {
+.nav_active b {
   text-decoration: none;
   color: #8ee85a;
 }
