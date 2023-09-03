@@ -1,0 +1,40 @@
+.timeline_wrapper {
+  display: flex;
+}
+
+.timeline{
+  position: relative;
+  height: 100vh;
+  margin-right: 10px;
+}
+
+.resume_wrapper {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  margin: 100px 0px;
+}
+
+.resume_content {
+  padding: 15px;
+}
+
+.career_term {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.career_role {
+  font-size: 20px;
+  color: #4661f9;
+  margin: 2px 0px;
+}
+
+.career_company {
+  font-size: 15px;
+  margin: 2px 0px;
+}
+
+.career_desc {
+  font-size: 15px;
+  margin-bottom: 0px;
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import '../../css/top/top.css'
 
 const chatList = [
   "Hi, I'm Takumasa Sugiyama.",

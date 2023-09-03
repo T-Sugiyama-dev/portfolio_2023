@@ -33,8 +33,12 @@ export const Cursor = ({ children }: CursorProps) => {
   }, [cursorPosition]);
 
   return (
-    <div onMouseMove={handleMouseMove}>
-      {children}
+    <div>
+      <div id="cursor"></div>
+      <div id="cursor_chaser"></div>
+      <div onMouseMove={handleMouseMove}>
+        {children}
+      </div>
     </div>
   );
 }
