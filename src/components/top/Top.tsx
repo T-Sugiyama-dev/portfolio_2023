@@ -4,9 +4,9 @@ import '../../css/top/chat.css'
 import { Chat } from "./Chat";
 
 const roleList = [
+  "Photographer",
   "Software Engineer",
   "Designer",
-  "Photographer",
   "Videographer"
 ];
 
