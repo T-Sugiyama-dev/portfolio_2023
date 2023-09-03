@@ -1,0 +1,41 @@
+.top_chat_container {
+  position: fixed;
+  z-index: 100;
+  bottom: 10%;
+  left: 5%;
+}
+
+.top_chat_wrapper {
+  background-color: rgb(149, 245, 39);
+  color: #191919;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  width: 300px;
+}
+
+.chat_fade_in {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fade-in-animation 1s ease-in-out forwards;
+}
+
+@keyframes fade-in-animation {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.chat_fade_out {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fade-out-animation 1s ease-in-out forwards;
+}
+
+@keyframes fade-out-animation {
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}

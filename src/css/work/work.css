@@ -1,0 +1,26 @@
+
+.transition_work {
+  color: #f11b9b;
+}
+
+.video_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video_wrapper {
+  width: 70%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+}
+
+.video_wrapper video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

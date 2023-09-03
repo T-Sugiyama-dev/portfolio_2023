@@ -1,0 +1,268 @@
+
+.about_container {
+
+}
+
+.transition_about {
+  color: rgb(64, 238, 238);
+}
+
+.about_title_wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.about_title_wrapper h1{
+  margin: 5px;
+}
+
+.about_title_wrapper h3{
+  margin: 5px;
+}
+
+.about_text {
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+}
+
+.scroll_wrapper {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  z-index: 2;
+}
+
+.scroll_text {
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.scrollDown {
+  margin: 1px auto;
+  display: block;
+  width: 3px;
+  border-radius: 5px;
+  height: 50px;
+  background-image: linear-gradient(
+    -180deg,
+    transparent,
+    rgb(255, 255, 255) 50%,
+    transparent 50%,
+    transparent
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  animation-name: scroll-down;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); /* easeOutQuintのイージング */
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes scroll-down {
+  0% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -100%;
+  }
+}
+
+.about_content_container {
+  width: 70%;
+  margin: 150px auto;
+  overflow: hidden;
+}
+
+.about_creative_container {
+  width: 70%;
+  height: 100vh;
+  margin: 20vh auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_creative_wrapper {
+  width: 100%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
+}
+
+.circle:hover{
+  border-radius: 20px;
+  scale: 0.7;
+}
+
+.circle_container .c1 {
+  background: #13e5fcce;
+  left: 20px;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  animation: 
+    float_x_1 10s ease-in-out infinite alternate,
+    float_y_1 17s ease-in-out infinite alternate;
+}
+
+.circle_container .c2 {
+  background: #fc13aace;
+  right: 20px;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  animation: 
+    float_x_2 10s ease-in-out infinite alternate,
+    float_y_2 17s ease-in-out infinite alternate;
+}
+
+@keyframes float_x_1 {
+  0% {
+    margin-left: 80vw;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes float_y_1 {
+  0% {
+    margin-top: 0px;
+  }
+
+  100% {
+    margin-top: 70vh;
+  }
+}
+
+@keyframes float_x_2 {
+  0% {
+    margin-right: 80vw;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+@keyframes float_y_2 {
+  0% {
+    margin-bottom: 0px;
+  }
+
+  100% {
+    margin-bottom: 70vh;
+  }
+}
+
+.car_container {
+  position: relative;
+  /* width: 100%; */
+  height: 200px;
+  animation: 
+    move_x 8s ease-in-out infinite;
+}
+
+@keyframes move_x {
+  0% {
+    margin-left: 100%;
+  }
+
+  45% {
+    margin-left: 30%;
+  }
+
+  75% {
+    margin-left: 40%;
+  }
+
+  100% {
+    margin-left: -100%;
+  }
+}
+
+.car_body {
+  position: absolute;
+  left: 50px;
+  z-index: 2;
+  bottom: 20px;
+  left: 10px;
+  animation: 
+    move_y 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes move_y {
+  0% {
+    margin-bottom: 0px;
+  }
+
+  100% {
+    margin-bottom: 6px;
+  }
+}
+
+.car_body img {
+  width: 300px
+}
+
+.tire_front {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: 35px;
+}
+
+.tire_rear {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: 225px;
+}
+
+.tire_front img {
+  width: 50px;
+  animation: rotate_anime 0.4s linear infinite;
+}
+
+@keyframes rotate_anime {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.tire_rear img {
+  width: 50px;
+  animation: rotate_anime 0.5s linear infinite;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}

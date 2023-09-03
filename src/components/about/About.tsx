@@ -1,90 +1,138 @@
 import { useState, useEffect, useRef } from "react";
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
-import '../../css/about.css'
+import { Resume } from "./Resume";
+import { Skill } from "./Skill";
+import sky_img from '../../images/sky_view.jpg';
+import car_body from '../../images/car/car_body.png';
+import tire from '../../images/car/tire.png';
+import '../../css/about/about.css'
 
 
 export const About = () => {
   return(
     <div className="about_container">
-      <div >
-        <h1
-          onMouseEnter={handleElHover}
-          onMouseLeave={handleElLeave}
-          className="about_text"
-        >
-          Takumasa Sugiyama
-        </h1>
 
-        <p
-          onMouseEnter={handleElHover}
-          onMouseLeave={handleElLeave}
-          className="about_text"
-        >
-          Software Engineer & UI/UX Designer<br />
-          Photographer & Videographer
-        </p>
+      <div className="transition">
+        <h2 className="transition_about">It's about me</h2>
       </div>
 
-      <div>
-        <h2
-          onMouseEnter={handleElHover}
-          onMouseLeave={handleElLeave}
-          className="about_text"
-        >
-          Skill
-        </h2>
+      <div className="about_wrapper">
+        <div className="about_title_wrapper">
+          <div>
+            <h1
+              onMouseEnter={handleElHover}
+              onMouseLeave={handleElLeave}
+              className="about_text"
+            >
+              Takumasa Sugiyama
+            </h1>
 
-        <ul
-          onMouseEnter={handleElHover}
-          onMouseLeave={handleElLeave}
-          className="about_text about_skill"
-        >
-          <li>Engineering
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript
-                <ul>
-                  <li>React.js</li>
-                  <li>Vue.js</li>
-                </ul>
-              </li>
-              <li>PHP
-                <ul>
-                  <li>Laravel</li>
-                </ul>
-              </li>
-              <li>Java
-                <ul>
-                  <li>Spring</li>
-                </ul>
-              </li>
-              <li>Python</li>
-              <li>ShellScript</li>
-              <li>Flutter</li>
-              <li>MySQL</li>
-              <li>PostgreSQL</li>
-            </ul>
-          </li>
-          <br />
+          <p
+            onMouseEnter={handleElHover}
+            onMouseLeave={handleElLeave}
+            className="about_text"
+          >
+            #Software engineer #Designer #Photographer #Videographer
+          </p>
 
-          <li>Design
-            <ul>
-              <li>Figma</li>
-              <li>Adoobe
-                <ul>
-                  <li>Photoshop</li>
-                  <li>Premiere Pro</li>
-                  <li>Lightroom</li>
-                  <li>XD</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          <div className="scroll_wrapper">
+            <p
+              onMouseEnter={handleElHover}
+              onMouseLeave={handleElLeave}
+              className="scroll_text"
+            >
+              Scroll
+            </p>
+            <span className="scrollDown"></span>
+          </div>
 
-        </ul>
+          <div className="circle_container">
+            <div
+              onMouseEnter={handleElHover}
+              onMouseLeave={handleElLeave}
+              className="circle c1">
+            </div>
+            <div
+              onMouseEnter={handleElHover}
+              onMouseLeave={handleElLeave}
+              className="circle c2">
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <div className="about_desc_wrapper">
+        <div className="about_creative_container">
+          <div className="about_creative_wrapper">
+
+            <div className="about_content_title_wrapper">
+              <h2
+                onMouseEnter={handleElHover}
+                onMouseLeave={handleElLeave}
+                className="about_text"
+              >
+                Creative Development
+              </h2>
+
+              <p
+                onMouseEnter={handleElHover}
+                onMouseLeave={handleElLeave}
+                className="about_text"
+              >
+                I make apps, websites, epic photos and videos.
+                I do everything from design creation to development.
+              </p>
+            </div>
+
+            <div className="car_container">
+
+              <div className="car_body">
+                <img
+                  onMouseEnter={handleElHover}
+                  onMouseLeave={handleElLeave}
+                  src={car_body} />
+              </div>
+
+              <div className="tire_front">
+                <img 
+                  onMouseEnter={handleElHover}
+                  onMouseLeave={handleElLeave}
+                  src={tire} />
+              </div>
+
+              <div className="tire_rear">
+                <img
+                  onMouseEnter={handleElHover}
+                  onMouseLeave={handleElLeave}
+                  src={tire} />
+              </div>
+            </div>
+            </div>
+        </div>
+
+        <div className="about_content_container">
+          <h2 className="about_text">Resume</h2>
+          <Resume />
+        </div>
+
+        <div className="about_content_container">
+          <h2 className="about_text">Skill</h2>
+          <Skill />
+        </div>
      
+      </div>
+
+      <footer>
+        <div className="copyright">
+          <small>&copy; 2023 Takumasa Sugiyama</small>
+        </div>
+      </footer>
+
+      </div>
+
+
+
     </div>
   );
 }
