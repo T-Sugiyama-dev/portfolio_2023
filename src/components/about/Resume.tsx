@@ -1,6 +1,5 @@
-import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import { useInView } from "react-intersection-observer";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Career } from "./Career";
 import '../../css/about/resume.css'
 
