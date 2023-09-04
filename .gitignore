@@ -23,3 +23,5 @@ yarn-error.log*
 **/images/
 **/video/
 robots.txt
+
+.vscode/
