@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import '../../css/top/top.css'
 import '../../css/top/chat.css'
 import { Chat } from "./Chat";
