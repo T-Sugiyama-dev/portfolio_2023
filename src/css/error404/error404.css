@@ -1,0 +1,24 @@
+
+.error_container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error_wrapper {
+  text-align: center;
+}
+
+.error_wrapper h1 {
+  color: #bbff61;
+  font-size: 75px;
+  margin: 3px 0px;
+}
+
+.error_wrapper h2 {
+  color: #FFFFFF;
+  font-size: 25px;
+  margin: 3px 0px;
+}

@@ -7,9 +7,7 @@ import '../../css/about/resume.css'
 export const Resume = () => {
 
   const [ref, inView] = useInView({
-    // triggerOnce: true, // 一度だけトリガーする
     rootMargin: '-100px 0px', // 100px手前でトリガーする
-    // threshold: 0.1,
   });
 
   const lineRef = useRef<HTMLDivElement>(null);

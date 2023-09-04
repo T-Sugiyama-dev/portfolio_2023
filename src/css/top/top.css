@@ -38,7 +38,7 @@
 }
 
 .bubble_wrapper {
-  padding-top: 50vh;
+  padding-top: 40vh;
   padding-left: 10vw;
   width: 100vw;
   height: 100vh;
@@ -51,7 +51,7 @@
 }
 
 .square {
-  font-size: 11vw;
+  font-size: 10vw;
   font-weight:900;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -233,4 +233,9 @@
 {
   0%, 100% { background-position: 0% 50%; }
        50% { background-position: 100% 50%; }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
 }

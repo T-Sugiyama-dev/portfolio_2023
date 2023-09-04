@@ -2,11 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import '../../css/top/top.css'
 import '../../css/top/chat.css'
 import { Chat } from "./Chat";
+import { Footer } from "../footer/footer";
 
 const roleList = [
+  "Photographer",
   "Software Engineer",
   "Designer",
-  "Photographer",
   "Videographer"
 ];
 
@@ -92,6 +93,9 @@ export const Top = () => {
       <div className="top_chat_container">
         <Chat />
       </div>
+
+      <Footer />
+      
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { Top } from './components/top/Top';
 import { About } from './components/about/About';
 import { Work } from './components/work/Work';
 import { Contact } from './components/contact/Contact';
+import { Error404 } from './components/error404/Error404';
 
 function App() {
   return(
@@ -18,10 +19,10 @@ function App() {
           <Route path={`/work`} element={<Work />} />
           <Route path={`/contact`} element={<Contact />} />
         </Route>
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );
-  
 }
 
 export default App;

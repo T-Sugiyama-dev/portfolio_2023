@@ -39,3 +39,11 @@
     transform: translateX(-100%);
   }
 }
+
+@media (max-width: 500px) {
+  .top_chat_wrapper {
+    padding: 10px 15px;
+    margin: 10px 0px;
+    width: 80%;
+  }
+}

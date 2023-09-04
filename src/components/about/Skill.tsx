@@ -25,7 +25,7 @@ const skillList: SkillContent[] = [
   { name: 'Bash Script', percent: 55 },
   { name: 'VBA', percent: 60 },
   { name: 'Flutter', percent: 47 },
-  { name: 'AWS', percent: 25 },
+  { name: 'AWS', percent: 35 },
   { name: 'MySQL', percent: 65 },
   { name: 'PostgreSQL', percent: 55 },
   { name: 'Oracle DB', percent: 30 },
