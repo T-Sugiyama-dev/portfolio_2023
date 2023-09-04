@@ -13,6 +13,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
   margin: 100px 0px;
+  width: 80%;
 }
 
 .resume_content {
@@ -22,6 +23,7 @@
 .career_term {
   font-size: 15px;
   margin: 0px;
+  color: #404040;
 }
 
 .career_role {
@@ -39,3 +41,11 @@
   font-size: 15px;
   margin-bottom: 0px;
 }
+
+@media (max-width: 500px) {
+  .resume_wrapper {
+    width: 95%;
+  }
+}
+
+

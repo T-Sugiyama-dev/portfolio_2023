@@ -67,3 +67,23 @@
     transform: translateX(0);
   }
 }
+
+@media (max-width: 500px) {
+  .skill_detail {
+    height: 12px;
+    width: 170px;
+  }
+
+  .skill_title {
+    width: 70px;
+  }
+
+  .skill_title p {
+    font-size: 13px;
+  }
+
+  .skill_detail_container p {
+    font-size: 13px;
+  }
+  
+}

@@ -49,3 +49,10 @@
     opacity: 0;
   }
 }
+
+
+@media (width: 500px) {
+  .transition h2 {
+    font-size: 14px;
+  }
+}

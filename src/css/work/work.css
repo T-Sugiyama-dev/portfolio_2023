@@ -179,3 +179,96 @@
 .work_10 img {
   width: 100%;
 }
+
+.work_play_btn {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #a4ff8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.work_btn_text {
+  margin: 0px 0px;
+  font-size: 12px;
+  color: #2d2d2d;
+}
+
+.work_btn_title {
+  margin: 2px 0px;
+  font-size: 22px;
+  color: #2d2d2d;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+@media (min-width: 1031px) {
+  .work_play_btn {
+    display: none; 
+  }
+}
+@media (max-width: 1030px) {
+  .work_text {
+    display: none;
+  }
+
+  .work {
+    bottom: auto!important;
+    right: auto!important;
+    top: 50%!important;
+    left: 50%!important;
+    transform: translate(-50%, -50%)!important;
+  }
+
+  .work_1 {
+    width: 70%;
+  }
+
+  .work_2 {
+    width: 55%;
+  }
+
+  .work_3 {
+    width: 80%;
+  }
+
+  .work_4 {
+    width: 50%;
+  }
+
+  .work_5 {
+    width: 100%;
+  }
+
+  .work_6 {
+    width: 75%;
+  }
+
+  .work_7 {
+    width: 80%;
+  }
+
+  .work_8 {
+    width: 55%;
+  }
+
+  .work_9 {
+    width: 80%;
+  }
+
+  .work_10 {
+    width: 80%;
+  }
+}
