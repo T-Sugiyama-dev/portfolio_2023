@@ -41,10 +41,11 @@
   width: 230px;
   background-color: aliceblue;
   border-radius: 15px;
-  position: relative;
-  overflow: hidden;
   display: flex;
   margin-right: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .skill_percent {

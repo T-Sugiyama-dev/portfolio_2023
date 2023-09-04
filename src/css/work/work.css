@@ -45,10 +45,6 @@
   height: 100%;
 }
 
-.work{
-  
-}
-
 .col:hover .work{
   display: block!important;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import '../../css/layout/header.css'
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import sky_img from '../../images/header/sky_view.jpg';
@@ -9,6 +9,14 @@ import london_eye_img from '../../images/header/london_eye_view.jpg';
 import city_view from '../../images/header/city_view.jpg';
 
 export const Header = () => {
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [videoRef]);
 
   const [menuClass, setMenuClass] = useState(["close","close","close","close"]);
 
@@ -133,7 +141,7 @@ export const Header = () => {
             isActive ? "nav_active" : "nav_pending"
           }>
             <div className={`${menuClass[2]} menu`}>
-              <video autoPlay loop muted >
+              <video ref={videoRef} autoPlay loop muted playsInline >
                 <source src={portfolio_movie} type="video/mp4" />
                 <p>Your browser doesn't support HTML5 video.</p>
               </video>

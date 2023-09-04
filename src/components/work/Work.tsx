@@ -11,9 +11,17 @@ import tokyo_view from '../../images/work/tokyo_view.jpg';
 import rclothes from '../../images/work/rclothes.png';
 import sharebuy from '../../images/work/sharebuy.png';
 import portfolio_2021 from '../../images/work/portfolio_2021.png';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export const Work = () => {
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [videoRef]);
 
   const [count, setCount] = useState<number>(0);
   const colList = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
@@ -86,7 +94,7 @@ export const Work = () => {
 
         <div id="work_5" className="close work_5">
           <div className='video_wrapper'>
-            <video autoPlay loop muted >
+            <video ref={videoRef} autoPlay loop muted playsInline >
               <source src={portfolio_movie} type="video/mp4" />
               <p>Your browser doesn't support HTML5 video.</p>
             </video>
