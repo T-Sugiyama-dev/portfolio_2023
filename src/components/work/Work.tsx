@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Footer } from '../footer/footer';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import '../../css/work/work.css';
@@ -7,14 +7,16 @@ import london_city_1 from '../../images/work/london_city_1.jpg';
 import london_city_2 from '../../images/work/london_city_2.jpg';
 import sunset from '../../images/work/sunset.jpg';
 import valletta from '../../images/work/valletta.jpg';
-import tokyo_human from '../../images/work/tokyo_human.jpg';
 import tokyo_view from '../../images/work/tokyo_view.jpg';
 import rclothes from '../../images/work/rclothes.png';
 import sharebuy from '../../images/work/sharebuy.png';
 import portfolio_2021 from '../../images/work/portfolio_2021.png';
+import { useState } from 'react';
 
 export const Work = () => {
-  const [workClass, setWorkClass] = useState<string>();
+
+  const [count, setCount] = useState<number>(0);
+  const colList = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
 
   const openWork = (col: string) => {
     const workContent = document.getElementById(col);
@@ -32,12 +34,35 @@ export const Work = () => {
     }
   }
 
+  const playWork = () => {
+
+    const exWorkContent = document.getElementsByClassName("work");
+    if(exWorkContent) {
+      for(let i=0; i<exWorkContent.length; i++) {
+        exWorkContent[i].classList.remove("close");
+        exWorkContent[i].classList.add("close");
+      }
+    }
+
+    const workContent = document.getElementById(colList[count]);
+    if(workContent) {
+      workContent.classList.remove("close");
+      workContent.classList.add("work");
+
+      if(count >= colList.length - 1) {
+        setCount(0);
+      }else{
+        setCount(count + 1);
+      }
+    }
+  }
+
   return(
     <div className='work_container'>
 
       <div className='transition'>
         <h2 className='transition_work'>
-          Hello World!!
+          What I've done
         </h2>
       </div>
 
@@ -179,6 +204,18 @@ export const Work = () => {
           Move cursor
         </p>
       </div>
+
+      <div 
+        onClick={playWork}
+        className="work_play_btn"
+      >
+        <div>
+          <p className="work_btn_text">Tap to</p>
+          <p className="work_btn_title"><b>Play</b></p>
+        </div>
+      </div>
+
+      <Footer />
 
     </div>
   );

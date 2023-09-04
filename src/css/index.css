@@ -4,7 +4,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  cursor: none;
   width: 100vw;
   height:100vh;
   background-color:black;
@@ -23,4 +22,10 @@ code {
 
 a {
   text-decoration: none;
+}
+
+@media (min-width: 1031px) {
+  body {
+    cursor: none;
+  }
 }

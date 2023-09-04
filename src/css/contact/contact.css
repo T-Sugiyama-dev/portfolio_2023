@@ -1,4 +1,94 @@
 
+.contact_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .transition_contact {
-  color: #5e69ff;
+  color: #71ff4a;
+}
+
+.contact_wrapper {
+  text-align: center;
+}
+
+.contact_logo_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+}
+
+.contact_logo {
+  height: 100px;
+  margin: 0px 25px;
+}
+
+.contact_logo img{
+  height: 100%;
+}
+
+.contact_wrapper h2 {
+  font-size: 35px;
+  text-shadow: 0 0 5px #ffa807, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #f9f0a6;
+  text-align: center;
+  animation: blink 5s infinite;
+  -webkit-animation: blink 5s infinite;
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 500px) {
+  .contact_logo {
+    height: 60px;
+    margin: 0px 15px;
+  }
 }
