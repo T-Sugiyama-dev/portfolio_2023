@@ -51,8 +51,9 @@
 }
 
 .square {
-  font-size: 10vw;
+  font-size: 6vw;
   font-weight:900;
+  line-height: 1.2;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   cursor:default;
@@ -238,4 +239,10 @@
 footer {
   position: absolute;
   bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .square {
+    font-size: 10vw;
+  }
 }
