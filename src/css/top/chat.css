@@ -1,10 +1,3 @@
-.top_chat_container {
-  position: fixed;
-  z-index: 100;
-  bottom: 10%;
-  left: 5%;
-}
-
 .top_chat_wrapper {
   transform: translateX(-100%);
   background-color: rgb(149, 245, 39);
@@ -13,10 +6,14 @@
   padding: 10px 15px;
   margin: 10px 0px;
   width: 300px;
+  position: fixed;
+  z-index: 100;
+  bottom: 10%;
+  left: 5%;
+  opacity: 0;
 }
 
 .chat_fade_in {
-  opacity: 0;
   animation: fade-in-animation 1s ease-in-out forwards;
 }
 

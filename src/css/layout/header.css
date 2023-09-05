@@ -118,6 +118,7 @@
 }
 
 .close_menu {
+  transform: translateX(0);
   animation: menu_out 1s ease-in-out forwards;
 }
 
