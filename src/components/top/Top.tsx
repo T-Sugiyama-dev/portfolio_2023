@@ -90,9 +90,7 @@ export const Top = () => {
         </div>
       </div>
 
-      <div className="top_chat_container">
-        <Chat />
-      </div>
+      <Chat />
 
       <Footer />
       
