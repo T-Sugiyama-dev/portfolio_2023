@@ -19,6 +19,7 @@ export const Work = () => {
 
   useEffect(() => {
     if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
       videoRef.current.play();
     }
   }, [videoRef]);
