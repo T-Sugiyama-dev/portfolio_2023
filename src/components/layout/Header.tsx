@@ -14,6 +14,7 @@ export const Header = () => {
 
   useEffect(() => {
     if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
       videoRef.current.play();
     }
   }, [videoRef]);
