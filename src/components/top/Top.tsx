@@ -4,7 +4,7 @@ import '../../css/top/chat.css'
 import { Chat } from "./Chat";
 import { Footer } from "../footer/footer";
 
-const roleList = [
+const roleList: string[] = [
   "Photographer",
   "Software Engineer",
   "Designer",
@@ -16,7 +16,7 @@ export const Top = () => {
   const [role, setRole] = useState<string>(roleList[0]);
 
   const moveText = (num: number) => {
-    let square = document.getElementsByClassName('square');
+    let square: HTMLCollectionOf<Element> = document.getElementsByClassName('square');
     square[num].classList.add("rubberBand");
     square[num].addEventListener("animationend", function(){
       square[num].classList.remove("rubberBand");
@@ -26,7 +26,7 @@ export const Top = () => {
   useEffect(() => {
     let index = 0;
     const changeText = () => {
-      const roleElement = document.getElementById("role");
+      const roleElement: HTMLElement | null = document.getElementById("role");
       
       roleElement?.classList.add("word_rotate_out");
   

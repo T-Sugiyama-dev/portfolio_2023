@@ -24,10 +24,10 @@ export const Work = () => {
   }, [videoRef]);
 
   const [count, setCount] = useState<number>(0);
-  const colList = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
+  const colList: string[] = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
 
   const openWork = (col: string) => {
-    const workContent = document.getElementById(col);
+    const workContent: HTMLElement | null = document.getElementById(col);
     if(workContent) {
       workContent.classList.remove("close");
       workContent.classList.add("work");
@@ -35,7 +35,7 @@ export const Work = () => {
   }
 
   const closeWork = (col: string) => {
-    const workContent = document.getElementById(col);
+    const workContent: HTMLElement | null = document.getElementById(col);
     if(workContent) {
       workContent.classList.remove("work");
       workContent.classList.add("close");
@@ -44,7 +44,7 @@ export const Work = () => {
 
   const playWork = () => {
 
-    const exWorkContent = document.getElementsByClassName("work");
+    const exWorkContent: HTMLCollectionOf<Element> = document.getElementsByClassName("work");
     if(exWorkContent) {
       for(let i=0; i<exWorkContent.length; i++) {
         exWorkContent[i].classList.remove("close");
@@ -52,7 +52,7 @@ export const Work = () => {
       }
     }
 
-    const workContent = document.getElementById(colList[count]);
+    const workContent: HTMLElement | null = document.getElementById(colList[count]);
     if(workContent) {
       workContent.classList.remove("close");
       workContent.classList.add("work");
@@ -77,19 +77,19 @@ export const Work = () => {
       <div className='work_wrapper'>
 
         <div id="work_1" className="close work_1">
-          <img src={london_city_1} />
+          <img src={london_city_1} alt="work photo" />
         </div>
 
         <div id="work_2" className="close work_2">
-          <img src={heritage} />
+          <img src={heritage} alt="work photo" />
         </div>
 
         <div id="work_3" className="close work_3">
-          <img src={sharebuy} />
+          <img src={sharebuy} alt="work webapp" />
         </div>
 
         <div id="work_4" className="close work_4">
-          <img src={sunset} />
+          <img src={sunset} alt="work photo" />
         </div>
 
         <div id="work_5" className="close work_5">
@@ -102,23 +102,23 @@ export const Work = () => {
         </div>
 
         <div id="work_6" className="close work_6">
-          <img src={london_city_2} />
+          <img src={london_city_2} alt="work photo" />
         </div>
 
         <div id="work_7" className="close work_7">
-          <img src={portfolio_2021} />
+          <img src={portfolio_2021} alt="work website" />
         </div>
 
         <div id="work_8" className="close work_8">
-          <img src={valletta} />
+          <img src={valletta} alt="work photo" />
         </div>
 
         <div id="work_9" className="close work_9">
-          <img src={rclothes} />
+          <img src={rclothes} alt="work webapp" />
         </div>
 
         <div id="work_10" className="close work_10">
-          <img src={tokyo_view} />
+          <img src={tokyo_view} alt="work photo" />
         </div>
 
       </div>

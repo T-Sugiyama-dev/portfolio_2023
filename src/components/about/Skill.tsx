@@ -36,11 +36,11 @@ const skillList: SkillContent[] = [
 
 export const Skill = () => {
 
-  const [ref, inView] = useInView({
+  const [ref, inView]: any = useInView({
     threshold: 0.25,
   });
 
-  const skillClass = inView ? 'skill_percent' : 'close';
+  const skillClass: string = inView ? 'skill_percent' : 'close';
 
   return(
     <div>

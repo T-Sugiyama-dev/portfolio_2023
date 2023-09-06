@@ -6,8 +6,13 @@ interface CursorProps {
   children: React.ReactNode;
 }
 
+interface CursorPosition {
+  x: number;
+  y: number;
+}
+
 export const Cursor = ({ children }: CursorProps) => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorPosition, setCursorPosition] = useState<CursorPosition>({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const x = e.clientX;
@@ -16,8 +21,8 @@ export const Cursor = ({ children }: CursorProps) => {
   };
 
   useEffect(() => {
-    const cursor = document.getElementById("cursor");
-    const stalker = document.getElementById("cursor_chaser");
+    const cursor: HTMLElement | null = document.getElementById("cursor");
+    const stalker: HTMLElement | null = document.getElementById("cursor_chaser");
 
     if (cursor && stalker) {
       cursor.style.opacity = "0.9";
@@ -44,8 +49,8 @@ export const Cursor = ({ children }: CursorProps) => {
 }
 
 export const handleElHover = () => {
-  const cursor = document.getElementById("cursor");
-  const stalker = document.getElementById("cursor_chaser");
+  const cursor: HTMLElement | null = document.getElementById("cursor");
+  const stalker: HTMLElement | null = document.getElementById("cursor_chaser");
 
   if (cursor && stalker) {
     cursor.classList.add("active");
@@ -54,8 +59,8 @@ export const handleElHover = () => {
 };
 
 export const handleElLeave = () => {
-  const cursor = document.getElementById("cursor");
-  const stalker = document.getElementById("cursor_chaser");
+  const cursor: HTMLElement | null = document.getElementById("cursor");
+  const stalker: HTMLElement | null = document.getElementById("cursor_chaser");
 
   if (cursor && stalker) {
     cursor.classList.remove("active");

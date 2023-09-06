@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import '../../css/top/top.css'
 
-const chatList = [
+const chatList: string[] = [
   "Hi, I'm Takumasa Sugiyama.",
   "I'm currently working as a software engineer",
   "Throughout my journey, I've worn many hats including those of an engineer, designer, photographer, and videographer. ",

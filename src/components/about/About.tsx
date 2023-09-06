@@ -89,21 +89,24 @@ export const About = () => {
                   <img
                     onMouseEnter={handleElHover}
                     onMouseLeave={handleElLeave}
-                    src={car_body} />
+                    src={car_body}
+                    alt="car body" />
                 </div>
 
                 <div className="tire_front">
                   <img 
                     onMouseEnter={handleElHover}
                     onMouseLeave={handleElLeave}
-                    src={tire} />
+                    src={tire}
+                    alt="car tire" />
                 </div>
 
                 <div className="tire_rear">
                   <img
                     onMouseEnter={handleElHover}
                     onMouseLeave={handleElLeave}
-                    src={tire} />
+                    src={tire}
+                    alt="car tire" />
                 </div>
               </div>
             </div>
