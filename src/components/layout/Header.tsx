@@ -105,7 +105,7 @@ export const Header = () => {
             isActive ? "nav_active" : "nav_pending"
           }>
             <div className={`${menuClass[0]} menu`}>
-              <img src={sky_img} />
+              <img src={sky_img} alt="Top" />
               <div
                 onClick={closeMenu}
                 onMouseEnter={handleElHover}
@@ -123,7 +123,7 @@ export const Header = () => {
             isActive ? "nav_active" : "nav_pending"
           }>
             <div className={`${menuClass[1]} menu`}>
-              <img src={city_view} />
+              <img src={city_view} alt="About" />
               <div
                 onClick={closeMenu}
                 onMouseEnter={handleElHover}
@@ -162,7 +162,7 @@ export const Header = () => {
             isActive ? "nav_active" : "nav_pending"
           }>
             <div className={`${menuClass[3]} menu`}>
-              <img src={london_eye_img} />
+              <img src={london_eye_img} alt="Contact" />
               <div
                 onClick={closeMenu}
                 onMouseEnter={handleElHover}

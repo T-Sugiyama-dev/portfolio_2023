@@ -21,13 +21,13 @@ export const Contact = () => {
           
           <a href="https://www.linkedin.com/in/takumasa-sugiyama-9420aa238" target="_blank" rel="noopener noreferrer">
             <div className="contact_logo">
-              <img src={linkedin} />
+              <img src={linkedin} alt="linkedin" />
             </div>
           </a>
 
           <a href="https://github.com/T-Sugiyama-dev" target="_blank" rel="noopener noreferrer">
             <div className="contact_logo">
-              <img src={github} />
+              <img src={github} alt="github" />
             </div>
           </a>
           

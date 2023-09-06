@@ -77,19 +77,19 @@ export const Work = () => {
       <div className='work_wrapper'>
 
         <div id="work_1" className="close work_1">
-          <img src={london_city_1} />
+          <img src={london_city_1} alt="work photo" />
         </div>
 
         <div id="work_2" className="close work_2">
-          <img src={heritage} />
+          <img src={heritage} alt="work photo" />
         </div>
 
         <div id="work_3" className="close work_3">
-          <img src={sharebuy} />
+          <img src={sharebuy} alt="work webapp" />
         </div>
 
         <div id="work_4" className="close work_4">
-          <img src={sunset} />
+          <img src={sunset} alt="work photo" />
         </div>
 
         <div id="work_5" className="close work_5">
@@ -102,23 +102,23 @@ export const Work = () => {
         </div>
 
         <div id="work_6" className="close work_6">
-          <img src={london_city_2} />
+          <img src={london_city_2} alt="work photo" />
         </div>
 
         <div id="work_7" className="close work_7">
-          <img src={portfolio_2021} />
+          <img src={portfolio_2021} alt="work website" />
         </div>
 
         <div id="work_8" className="close work_8">
-          <img src={valletta} />
+          <img src={valletta} alt="work photo" />
         </div>
 
         <div id="work_9" className="close work_9">
-          <img src={rclothes} />
+          <img src={rclothes} alt="work webapp" />
         </div>
 
         <div id="work_10" className="close work_10">
-          <img src={tokyo_view} />
+          <img src={tokyo_view} alt="work photo" />
         </div>
 
       </div>
