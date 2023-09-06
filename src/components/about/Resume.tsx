@@ -5,7 +5,7 @@ import '../../css/about/resume.css'
 
 export const Resume = () => {
 
-  const [ref, inView] = useInView({
+  const [ref, inView]: any = useInView({
     rootMargin: '-100px 0px', // 100px手前でトリガーする
   });
 

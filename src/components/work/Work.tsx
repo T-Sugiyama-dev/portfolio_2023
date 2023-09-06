@@ -24,10 +24,10 @@ export const Work = () => {
   }, [videoRef]);
 
   const [count, setCount] = useState<number>(0);
-  const colList = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
+  const colList: string[] = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
 
   const openWork = (col: string) => {
-    const workContent = document.getElementById(col);
+    const workContent: HTMLElement | null = document.getElementById(col);
     if(workContent) {
       workContent.classList.remove("close");
       workContent.classList.add("work");
@@ -35,7 +35,7 @@ export const Work = () => {
   }
 
   const closeWork = (col: string) => {
-    const workContent = document.getElementById(col);
+    const workContent: HTMLElement | null = document.getElementById(col);
     if(workContent) {
       workContent.classList.remove("work");
       workContent.classList.add("close");
@@ -44,7 +44,7 @@ export const Work = () => {
 
   const playWork = () => {
 
-    const exWorkContent = document.getElementsByClassName("work");
+    const exWorkContent: HTMLCollectionOf<Element> = document.getElementsByClassName("work");
     if(exWorkContent) {
       for(let i=0; i<exWorkContent.length; i++) {
         exWorkContent[i].classList.remove("close");
@@ -52,7 +52,7 @@ export const Work = () => {
       }
     }
 
-    const workContent = document.getElementById(colList[count]);
+    const workContent: HTMLElement | null = document.getElementById(colList[count]);
     if(workContent) {
       workContent.classList.remove("close");
       workContent.classList.add("work");

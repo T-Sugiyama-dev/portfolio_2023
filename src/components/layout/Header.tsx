@@ -18,13 +18,13 @@ export const Header = () => {
     }
   }, [videoRef]);
 
-  const [menuClass, setMenuClass] = useState(["close","close","close","close"]);
+  const [menuClass, setMenuClass] = useState<string[]>(["close","close","close","close"]);
 
   const openMenu = () => {
-    const menu = document.getElementById("menu");
-    const menu_btn = document.getElementById("menu_btn");
-    const menu_close_btn = document.getElementById("menu_close_btn");
-    const menuList = document.getElementsByClassName("menu");
+    const menu: HTMLElement | null = document.getElementById("menu");
+    const menu_btn: HTMLElement | null = document.getElementById("menu_btn");
+    const menu_close_btn: HTMLElement | null = document.getElementById("menu_close_btn");
+    const menuList: HTMLCollectionOf<Element> = document.getElementsByClassName("menu");
   
     if (menu && menu_btn && menuList && menu_close_btn) {
       menu_btn.classList.add("close");
@@ -44,10 +44,10 @@ export const Header = () => {
   }
 
   const closeMenu = () => {
-    const menu = document.getElementById("menu");
-    const menu_btn = document.getElementById("menu_btn");
-    const menu_close_btn = document.getElementById("menu_close_btn");
-    const menuList = document.getElementsByClassName("menu");
+    const menu: HTMLElement | null = document.getElementById("menu");
+    const menu_btn: HTMLElement | null = document.getElementById("menu_btn");
+    const menu_close_btn: HTMLElement | null = document.getElementById("menu_close_btn");
+    const menuList: HTMLCollectionOf<Element> = document.getElementsByClassName("menu");
 
     if (menu && menu_btn && menuList && menu_close_btn) {
       menu_close_btn.classList.add("close");
@@ -143,7 +143,7 @@ export const Header = () => {
             <div className={`${menuClass[2]} menu`}>
               <video ref={videoRef} autoPlay loop muted playsInline >
                 <source src={portfolio_movie} type="video/mp4" />
-                <p>Your browser doesn't support HTML5 video.</p>
+                <p className="error_video">Your browser doesn't support HTML5 video.</p>
               </video>
               <div
                 onClick={closeMenu}
