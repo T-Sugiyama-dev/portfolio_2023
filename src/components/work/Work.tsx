@@ -22,7 +22,7 @@ export const Work = () => {
       videoRef.current.defaultMuted = true;
       videoRef.current.play();
     }
-  }, [videoRef]);
+  }, [videoRef.current]);
 
   const [count, setCount] = useState<number>(0);
   const colList: string[] = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];

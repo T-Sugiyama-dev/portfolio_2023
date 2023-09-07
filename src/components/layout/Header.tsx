@@ -17,7 +17,7 @@ export const Header = () => {
       videoRef.current.defaultMuted = true;
       videoRef.current.play();
     }
-  }, [videoRef]);
+  }, [videoRef.current]);
 
   const [menuClass, setMenuClass] = useState<string[]>(["close","close","close","close"]);
 
