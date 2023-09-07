@@ -203,6 +203,10 @@
   color: #2d2d2d;
 }
 
+.error_video {
+  color: #FFFFFF;
+}
+
 footer {
   position: absolute;
   bottom: 0;
