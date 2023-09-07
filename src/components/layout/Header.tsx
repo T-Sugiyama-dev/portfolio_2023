@@ -7,6 +7,7 @@ import sky_img from '../../images/header/sky_view.jpg';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
 import london_eye_img from '../../images/header/london_eye_view.jpg';
 import city_view from '../../images/header/city_view.jpg';
+import popeye from '../../images/header/popeye.png';
 
 export const Header = () => {
 
@@ -17,7 +18,7 @@ export const Header = () => {
       videoRef.current.defaultMuted = true;
       videoRef.current.play();
     }
-  }, [videoRef]);
+  }, [videoRef.current]);
 
   const [menuClass, setMenuClass] = useState<string[]>(["close","close","close","close"]);
 
@@ -142,7 +143,7 @@ export const Header = () => {
             isActive ? "nav_active" : "nav_pending"
           }>
             <div className={`${menuClass[2]} menu`}>
-              <video ref={videoRef} autoPlay loop muted playsInline >
+              <video ref={videoRef} preload="auto" poster={popeye} autoPlay loop muted webkit-playsInLine playsInline >
                 <source src={portfolio_movie} type="video/mp4" />
                 <p className="error_video">Your browser doesn't support HTML5 video.</p>
               </video>

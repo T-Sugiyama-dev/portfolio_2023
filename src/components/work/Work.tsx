@@ -1,6 +1,7 @@
 import { Footer } from '../footer/footer';
-import portfolio_movie from '../../video/portfolio_movie.mp4';
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
+import { useState, useEffect, useRef } from 'react';
+import portfolio_movie from '../../video/portfolio_movie.mp4';
 import '../../css/work/work.css';
 import heritage from '../../images/work/heritage.jpg';
 import london_city_1 from '../../images/work/london_city_1.jpg';
@@ -11,7 +12,7 @@ import tokyo_view from '../../images/work/tokyo_view.jpg';
 import rclothes from '../../images/work/rclothes.png';
 import sharebuy from '../../images/work/sharebuy.png';
 import portfolio_2021 from '../../images/work/portfolio_2021.png';
-import { useState, useEffect, useRef } from 'react';
+import popeye from '../../images/header/popeye.png';
 
 export const Work = () => {
 
@@ -22,7 +23,7 @@ export const Work = () => {
       videoRef.current.defaultMuted = true;
       videoRef.current.play();
     }
-  }, [videoRef]);
+  }, [videoRef.current]);
 
   const [count, setCount] = useState<number>(0);
   const colList: string[] = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
@@ -95,9 +96,9 @@ export const Work = () => {
 
         <div id="work_5" className="close work_5">
           <div className='video_wrapper'>
-            <video ref={videoRef} autoPlay loop muted playsInline >
+            <video ref={videoRef} preload="auto"  poster={popeye} autoPlay loop muted webkit-playsInLine playsInline >
               <source src={portfolio_movie} type="video/mp4" />
-              <p>Your browser doesn't support HTML5 video.</p>
+              <p className="error_video">Your browser doesn't support HTML5 video.</p>
             </video>
           </div>
         </div>
