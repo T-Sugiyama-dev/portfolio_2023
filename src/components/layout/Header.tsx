@@ -114,7 +114,7 @@ export const Header = () => {
                 onMouseLeave={handleElLeave}
                 className="overlay"
               >
-                <b>Top</b>
+                <b>TOP</b>
               </div>
             </div>
           </NavLink>
@@ -132,7 +132,7 @@ export const Header = () => {
                 onMouseLeave={handleElLeave}
                 className="overlay"
               >
-                <b>About</b>
+                <b>ABOUT</b>
               </div>
             </div>
           </NavLink>
@@ -153,7 +153,7 @@ export const Header = () => {
                 onMouseLeave={handleElLeave}
                 className="overlay"
               >
-                <b>Work</b>
+                <b>WORK</b>
               </div>
             </div>
           </NavLink>
@@ -171,7 +171,7 @@ export const Header = () => {
                 onMouseLeave={handleElLeave}
                 className="overlay"
               >
-                <b>Contact</b>
+                <b>CONTACT</b>
               </div>
             </div>
           </NavLink>
