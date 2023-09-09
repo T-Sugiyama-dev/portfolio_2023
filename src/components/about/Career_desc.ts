@@ -29,9 +29,12 @@ const career_2th =
 const career_1th =
 "I was involved in editing video educational materials.";
 
+const university = 
+"I was studying topics related to the information society and programming.";
+
 export const careerList: CareerContent[] = [
   { term: 'Apr 2023 - Recent', role: 'Software Engineer', company: 'IT-Consulting company', desc: career_8th },
-  { term: 'Apr 2019 - Mar 2023', role: 'Graduate from university', company: '', desc: 'I was studying topics related to the information society and programming.' },
+  { term: 'Apr 2019 - Mar 2023', role: 'Graduate from university', company: '', desc: university },
   { term: 'May 2022 - Mar 2023', role: 'Front-end engineer, Web designer', company: 'Web media company', desc: career_7th },
   { term: 'May 2022 - Feb 2023', role: 'Front-end engineer, Web designer', company: 'Web design company', desc: career_6th },
   { term: 'Jan 2022 - Apr 2022', role: 'Marketer, Customer Success', company: 'Startup online platform company', desc: career_5th },

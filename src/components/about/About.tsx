@@ -6,7 +6,6 @@ import car_body from '../../images/car/car_body.png';
 import tire from '../../images/car/tire.png';
 import '../../css/about/about.css'
 
-
 export const About = () => {
   return(
     <div className="about_container">

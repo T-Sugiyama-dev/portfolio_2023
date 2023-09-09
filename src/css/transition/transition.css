@@ -50,9 +50,14 @@
   }
 }
 
-
-@media (width: 500px) {
+@media (min-width: 500px) {
   .transition h2 {
-    font-size: 14px;
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 900px) {
+  .transition h2 {
+    font-size: 40px;
   }
 }

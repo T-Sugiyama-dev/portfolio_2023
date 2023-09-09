@@ -7,7 +7,6 @@ export const TopLayout= () => {
 
   return (
     <Cursor>
-      <div id="transition"></div>
       <Header />
       <main>
         <Outlet />
