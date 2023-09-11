@@ -1,5 +1,5 @@
 import React from "react";
-import '../../css/layout/header.css'
+import '../../css/header/header.css'
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { handleElHover, handleElLeave } from "../cursor/Cursor";

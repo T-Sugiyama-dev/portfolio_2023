@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { TopLayout } from './components/layout/Layout';
+import { Layout } from './components/Layout';
 import { Top } from './components/top/Top';
 import { About } from './components/about/About';
 import { Work } from './components/work/Work';
@@ -10,7 +10,7 @@ function App() {
   return(
     <BrowserRouter>
       <Routes>
-        <Route path={`/`} element={<TopLayout />}>
+        <Route path={`/`} element={<Layout />}>
           <Route index element={<Top />} />
           <Route path={`/about`} element={<About />} />
           <Route path={`/work`} element={<Work />} />
