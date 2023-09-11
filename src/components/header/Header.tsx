@@ -1,4 +1,3 @@
-import React from "react";
 import '../../css/header/header.css'
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
@@ -143,7 +142,7 @@ export const Header = () => {
             isActive ? "nav_active" : "nav_pending"
           }>
             <div className={`${menuClass[2]} menu`}>
-              <video ref={videoRef} preload="auto" poster={popeye} autoPlay loop muted webkit-playsInLine playsInline >
+              <video ref={videoRef} preload="auto" poster={popeye} autoPlay loop muted playsInline >
                 <source src={portfolio_movie} type="video/mp4" />
                 <p className="error_video">Your browser doesn't support HTML5 video.</p>
               </video>

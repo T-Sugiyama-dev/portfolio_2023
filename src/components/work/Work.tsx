@@ -96,7 +96,7 @@ export const Work = () => {
 
         <div id="work_5" className="close work_5">
           <div className='video_wrapper'>
-            <video ref={videoRef} preload="auto"  poster={popeye} autoPlay loop muted webkit-playsInLine playsInline >
+            <video ref={videoRef} preload="auto"  poster={popeye} autoPlay loop muted playsInline >
               <source src={portfolio_movie} type="video/mp4" />
               <p className="error_video">Your browser doesn't support HTML5 video.</p>
             </video>
