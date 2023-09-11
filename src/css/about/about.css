@@ -134,8 +134,8 @@
   width: 250px;
   height: 250px;
   animation: 
-    float_x_1 10s ease-in-out infinite alternate,
-    float_y_1 17s ease-in-out infinite alternate;
+    float_x_1 20s ease-in-out infinite alternate,
+    float_y_1 34s ease-in-out infinite alternate;
 }
 
 .circle_container .c2 {
@@ -145,8 +145,8 @@
   width: 200px;
   height: 200px;
   animation: 
-    float_x_2 10s ease-in-out infinite alternate,
-    float_y_2 17s ease-in-out infinite alternate;
+    float_x_2 20s ease-in-out infinite alternate,
+    float_y_2 34s ease-in-out infinite alternate;
 }
 
 @keyframes float_x_1 {
