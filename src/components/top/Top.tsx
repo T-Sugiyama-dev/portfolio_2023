@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import '../../css/top/top.css'
-import '../../css/top/chat.css'
 import { Chat } from "./Chat";
+import { Transition } from "../transition/Transition";
 import { Footer } from "../footer/footer";
+import './top.css'
 
 const roleList: string[] = [
   "Photographer",
@@ -55,9 +55,7 @@ export const Top = () => {
   return(
     <div className="top_container">
 
-      <div className="transition">
-        <h2 className="transition_top">Just a second...</h2>
-      </div>
+      <Transition class="transition_top" text="Just a second..." />
 
       <div className="bubble">
 

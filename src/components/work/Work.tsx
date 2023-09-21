@@ -1,8 +1,9 @@
-import { Footer } from '../footer/footer';
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import { useState, useEffect, useRef } from 'react';
+import { Transition } from "../transition/Transition";
+import { Footer } from '../footer/footer';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
-import '../../css/work/work.css';
+import './work.css';
 import heritage from '../../images/work/heritage.jpg';
 import london_city_1 from '../../images/work/london_city_1.jpg';
 import london_city_2 from '../../images/work/london_city_2.jpg';
@@ -70,11 +71,7 @@ export const Work = () => {
   return(
     <div className='work_container'>
 
-      <div className='transition'>
-        <h2 className='transition_work'>
-          What I've done
-        </h2>
-      </div>
+      <Transition class="transition_work" text="What I've done" />
 
       <div className='work_wrapper'>
 

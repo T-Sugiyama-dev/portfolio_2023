@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import '../../css/top/top.css'
+import './chat.css'
 
 const chatList: string[] = [
   "Hi, I'm Takumasa Sugiyama.",
@@ -39,7 +39,7 @@ export const Chat = () => {
   }, []);
 
   return(
-    <div className={`top_chat_wrapper ${chatClass}`}>
+    <div className={`chat_wrapper ${chatClass}`}>
       {message}
     </div>
   );

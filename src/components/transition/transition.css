@@ -11,6 +11,22 @@
   animation: transition_animation 3s ease-in-out;
 }
 
+.transition_top {
+  color: #ff534d;
+}
+
+.transition_about {
+  color: rgb(64, 238, 238);
+}
+
+.transition_work {
+  color: #f11b9b;
+}
+
+.transition_contact {
+  color: #71ff4a;
+}
+
 @keyframes transition_animation {
   0% {
     transform: translateY(100vh);

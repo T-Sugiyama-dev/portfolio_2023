@@ -1,6 +1,6 @@
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import { useInView } from "react-intersection-observer";
-import '../../css/about/skill.css'
+import './skill.css'
 
 interface SkillContent{
   name: string;

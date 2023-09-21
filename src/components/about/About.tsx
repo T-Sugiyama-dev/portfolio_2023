@@ -1,18 +1,17 @@
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
+import { Transition } from "../transition/Transition";
 import { Resume } from "./Resume";
 import { Skill } from "./Skill";
 import { Footer } from "../footer/footer";
 import car_body from '../../images/car/car_body.png';
 import tire from '../../images/car/tire.png';
-import '../../css/about/about.css'
+import './about.css'
 
 export const About = () => {
   return(
     <div className="about_container">
 
-      <div className="transition">
-        <h2 className="transition_about">Who I am</h2>
-      </div>
+      <Transition class="transition_about" text="Who I am" />
 
       <div className="about_wrapper">
         <div className="about_title_wrapper">

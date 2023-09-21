@@ -7,10 +7,6 @@
   overflow: hidden;
 }
 
-.transition_top {
-  color: #ff534d;
-}
-
 .word_rotate_in {
   opacity: 0;
   transform: translateY(100%);
