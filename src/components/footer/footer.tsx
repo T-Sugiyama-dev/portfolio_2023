@@ -9,7 +9,3 @@ export const Footer = () => {
     </footer>
   );
 }
-
-export const Footer_relative = () => {
-  
-}
