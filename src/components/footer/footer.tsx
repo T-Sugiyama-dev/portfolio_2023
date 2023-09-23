@@ -1,15 +1,15 @@
-import '../../css/footer/footer.css'
+import './footer.css'
 
-export const Footer = () => {
+interface footerProp  {
+  class: string;
+}
+
+export const Footer = (props: footerProp) => {
   return(
-    <footer>
+    <footer className={`footer_${props.class}`}>
       <div className="copyright">
         <small>&copy; 2023 Takumasa Sugiyama</small>
       </div>
     </footer>
   );
-}
-
-export const Footer_relative = () => {
-  
 }

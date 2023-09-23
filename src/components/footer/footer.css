@@ -1,0 +1,14 @@
+.footer_absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer_relative {
+  position: relative;
+}
+
+.copyright {
+  width: 100vw;
+  text-align: center;
+  color: #ffffff;
+}

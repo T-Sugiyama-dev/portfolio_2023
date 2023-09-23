@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
 import { Career } from "./Career";
-import '../../css/about/resume.css'
+import './resume.css'
 
 export const Resume = () => {
 

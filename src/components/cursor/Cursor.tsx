@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import '../../css/cursor/cursor.css';
+import './cursor.css';
 
 interface CursorProps {
   children: React.ReactNode;

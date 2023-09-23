@@ -10,10 +10,6 @@
   position: absolute;
 }
 
-.transition_work {
-  color: #f11b9b;
-}
-
 .work_title_wrapper {
   text-align: center;
   position: absolute;
@@ -206,13 +202,6 @@
 .error_video {
   color: #FFFFFF;
 }
-
-footer {
-  position: absolute;
-  bottom: 0;
-}
-
-
 
 @media (min-width: 1031px) {
   .work_play_btn {

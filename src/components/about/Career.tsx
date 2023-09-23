@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { careerList } from "./Career_desc";
-import '../../css/about/resume.css'
+import './resume.css'
 
 export const Career = () => {
 

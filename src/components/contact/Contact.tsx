@@ -1,5 +1,6 @@
+import { Transition } from '../transition/Transition';
 import { Footer } from '../footer/footer';
-import '../../css/contact/contact.css'
+import './contact.css'
 import github from '../../images/contact/github.png';
 import linkedin from '../../images/contact/linkedin.png';
 
@@ -7,11 +8,7 @@ export const Contact = () => {
   return(
     <div className="contact_container">
 
-      <div className="transition">
-        <h2 className="transition_contact">
-          Say Hello!!
-        </h2>
-      </div>
+      <Transition class="transition_contact" text="Say Hello!!" />
 
       <div className="contact_wrapper">
 
@@ -35,7 +32,7 @@ export const Contact = () => {
 
       </div>
 
-      <Footer />
+      <Footer class="absolute" />
 
     </div>
   );

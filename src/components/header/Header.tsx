@@ -1,7 +1,7 @@
-import '../../css/header/header.css'
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
+import './header.css'
 import sky_img from '../../images/header/sky_view.jpg';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
 import london_eye_img from '../../images/header/london_eye_view.jpg';

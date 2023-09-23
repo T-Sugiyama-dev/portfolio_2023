@@ -7,10 +7,6 @@
   overflow: hidden;
 }
 
-.transition_top {
-  color: #ff534d;
-}
-
 .word_rotate_in {
   opacity: 0;
   transform: translateY(100%);
@@ -234,11 +230,6 @@
 {
   0%, 100% { background-position: 0% 50%; }
        50% { background-position: 100% 50%; }
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
 }
 
 @media (max-width: 1000px) {
