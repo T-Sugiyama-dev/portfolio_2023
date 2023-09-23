@@ -32,7 +32,7 @@ export const Contact = () => {
 
       </div>
 
-      <Footer />
+      <Footer class="absolute" />
 
     </div>
   );

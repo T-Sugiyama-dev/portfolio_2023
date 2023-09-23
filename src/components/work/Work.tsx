@@ -222,7 +222,7 @@ export const Work = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer class="absolute" />
 
     </div>
   );

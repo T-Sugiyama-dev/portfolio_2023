@@ -232,11 +232,6 @@
        50% { background-position: 100% 50%; }
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-}
-
 @media (max-width: 1000px) {
   .square {
     font-size: 10vw;

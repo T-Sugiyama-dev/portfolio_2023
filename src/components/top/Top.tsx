@@ -49,8 +49,6 @@ export const Top = () => {
       clearInterval(intervalId);
     };
   }, []);
-  
-
 
   return(
     <div className="top_container">
@@ -90,7 +88,7 @@ export const Top = () => {
 
       <Chat />
 
-      <Footer />
+      <Footer class="absolute" />
       
     </div>
   );

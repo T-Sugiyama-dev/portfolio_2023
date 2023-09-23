@@ -124,9 +124,7 @@ export const About = () => {
 
       </div>
 
-      <div className="footer_relative">
-        <Footer />
-      </div>
+      <Footer class="relative" />
 
     </div>
   );

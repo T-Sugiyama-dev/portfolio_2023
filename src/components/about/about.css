@@ -267,10 +267,6 @@
   animation: rotate_anime 0.5s linear infinite;
 }
 
-.footer_relative {
-  position: relative;
-}
-
 @media (min-width: 1300px) {
   .car_container {
     animation: 

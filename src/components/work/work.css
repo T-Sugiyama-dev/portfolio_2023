@@ -203,13 +203,6 @@
   color: #FFFFFF;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-}
-
-
-
 @media (min-width: 1031px) {
   .work_play_btn {
     display: none; 
