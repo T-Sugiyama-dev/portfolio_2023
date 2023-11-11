@@ -2,20 +2,20 @@ import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import { useState, useEffect, useRef } from 'react';
 import { Transition } from "../transition/Transition";
 import { Footer } from '../footer/footer';
-import portfolio_movie from '../../video/portfolio_movie.mp4';
 import './work.css';
-import heritage from '../../images/work/heritage.jpg';
-import london_city_1 from '../../images/work/london_city_1.jpg';
-import london_city_2 from '../../images/work/london_city_2.jpg';
-import sunset from '../../images/work/sunset.jpg';
-import valletta from '../../images/work/valletta.jpg';
-import tokyo_view from '../../images/work/tokyo_view.jpg';
-import rclothes from '../../images/work/rclothes.png';
-import sharebuy from '../../images/work/sharebuy.png';
-import portfolio_2021 from '../../images/work/portfolio_2021.png';
-import popeye from '../../images/header/popeye.png';
+import heritage         from '../../images/work/heritage.jpg';
+import london_city_1    from '../../images/work/london_city_1.jpg';
+import london_city_2    from '../../images/work/london_city_2.jpg';
+import sunset           from '../../images/work/sunset.jpg';
+import valletta         from '../../images/work/valletta.jpg';
+import tokyo_view       from '../../images/work/tokyo_view.jpg';
+import rclothes         from '../../images/work/rclothes.png';
+import sharebuy         from '../../images/work/sharebuy.png';
+import portfolio_2021   from '../../images/work/portfolio_2021.png';
+import popeye           from '../../images/header/popeye.png';
+import portfolio_movie  from '../../video/portfolio_movie.mp4';
 
-export const Work = () => {
+export const Work: React.FC = () => {
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -71,7 +71,7 @@ export const Work = () => {
   return(
     <div className='work_container'>
 
-      <Transition class="transition_work" text="What I've done" />
+      <Transition className="transition_work" text="What I've done" />
 
       <div className='work_wrapper'>
 
@@ -222,7 +222,7 @@ export const Work = () => {
         </div>
       </div>
 
-      <Footer class="absolute" />
+      <Footer className="absolute" />
 
     </div>
   );

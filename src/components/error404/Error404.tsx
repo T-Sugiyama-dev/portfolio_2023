@@ -1,6 +1,6 @@
 import './error404.css';
 
-export const Error404 = () => {
+export const Error404: React.FC = () => {
   return(
     <div className="error_container">
       <div className="error_wrapper">

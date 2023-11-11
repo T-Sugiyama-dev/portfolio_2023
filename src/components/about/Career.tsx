@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { careerList } from "./Career_desc";
 import './resume.css'
 
-export const Career = () => {
+export const Career: React.FC = () => {
 
   return(
     <div className="resume_container">
@@ -39,5 +39,5 @@ export const Career = () => {
     </div>
   );
 
-}
+};
 

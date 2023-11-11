@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import './chat.css'
 
@@ -10,10 +11,10 @@ const chatList: string[] = [
   "If you'd like to get in touch, please reach out through 'contact' page."
 ];
 
-export const Chat = () => {
+export const Chat: React.FC = React.memo(() => {
   const [chatClass, setChatClass] = useState<string>("close");
   const [message, setMessage] = useState<string>("");
-
+  
   useEffect(() => {
     
     const startChatEffect = () => {
@@ -43,4 +44,4 @@ export const Chat = () => {
       {message}
     </div>
   );
-}
+});

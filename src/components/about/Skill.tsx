@@ -2,10 +2,10 @@ import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import { useInView } from "react-intersection-observer";
 import './skill.css'
 
-interface SkillContent{
-  name: string;
-  percent: number;
-}
+interface SkillContent {
+  name    : string;
+  percent : number;
+};
 
 const skillList: SkillContent[] = [
   { name: 'HTML', percent: 82 },
@@ -35,7 +35,7 @@ const skillList: SkillContent[] = [
   { name: 'Premiere Pro', percent: 70 }
 ];
 
-export const Skill = () => {
+export const Skill: React.FC = () => {
 
   const [ref, inView]: any = useInView({
     threshold: 0.25,
@@ -72,4 +72,4 @@ export const Skill = () => {
       
     </div>
   );
-}
+};

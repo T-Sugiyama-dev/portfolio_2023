@@ -1,9 +1,9 @@
 interface CareerContent {
-  term: string;
-  role: string;
-  company: string;
-  desc: string;
-}
+  term    : string;
+  role    : string;
+  company : string;
+  desc    : string;
+};
 
 const career_8th = 
 "I'm involved in the design and development of software to solve problems faced by client companies.";

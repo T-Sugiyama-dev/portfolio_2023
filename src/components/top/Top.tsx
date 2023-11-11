@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Chat } from "./Chat";
 import { Transition } from "../transition/Transition";
@@ -5,13 +6,13 @@ import { Footer } from "../footer/footer";
 import './top.css'
 
 const roleList: string[] = [
-  "Photographer",
-  "Software Engineer",
-  "Designer",
-  "Videographer"
+  "photographer",
+  "software engineer",
+  "designer",
+  "videographer"
 ];
 
-export const Top = () => {
+export const Top:React.FC = () => {
   
   const [role, setRole] = useState<string>(roleList[0]);
 
@@ -53,7 +54,7 @@ export const Top = () => {
   return(
     <div className="top_container">
 
-      <Transition class="transition_top" text="Just a second..." />
+      <Transition className="transition_top" text="Just a second..." />
 
       <div className="bubble">
 
@@ -78,6 +79,8 @@ export const Top = () => {
             <div onMouseEnter={() => moveText(12)} className="square" >'</div>
             <div onMouseEnter={() => moveText(13)} className="square" >m</div>
             <div>　</div>
+            <div onMouseEnter={() => moveText(14)} className="square" > a</div>
+            <div>　</div>
             <div className="roleWrapper">
               <div className="square" id="role" >{role}</div>
             </div>
@@ -88,9 +91,9 @@ export const Top = () => {
 
       <Chat />
 
-      <Footer class="absolute" />
+      <Footer className="absolute" />
       
     </div>
   );
-}
+};
 
