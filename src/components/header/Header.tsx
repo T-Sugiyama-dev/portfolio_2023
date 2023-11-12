@@ -1,16 +1,20 @@
-import { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
-import { handleElHover, handleElLeave } from "../cursor/Cursor";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { motion } from "framer-motion";
+import { NavItem } from "./NavItem";
 import './header.css'
-import sky_img from '../../images/header/sky_view.jpg';
+import sky_img         from '../../images/header/sky_view.jpg';
+import london_eye_img  from '../../images/header/london_eye_view.jpg';
+import city_view       from '../../images/header/city_view.jpg';
+import popeye          from '../../images/header/popeye.png';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
-import london_eye_img from '../../images/header/london_eye_view.jpg';
-import city_view from '../../images/header/city_view.jpg';
-import popeye from '../../images/header/popeye.png';
 
-export const Header = () => {
-
+export const Header: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [openBtn, setOpenBtn]   = useState<boolean>(true);
+  const [closeBtn, setCloseBtn] = useState<boolean>(false);
+  const [menu, setMenu]         = useState<boolean>(false);
+  const [start, setStart]       = useState<string>("100%");
+  const [end, setEnd]           = useState<string>("100%");
 
   useEffect(() => {
     if (videoRef.current) {
@@ -19,61 +23,38 @@ export const Header = () => {
     }
   }, [videoRef.current]);
 
-  const [menuClass, setMenuClass] = useState<string[]>(["close","close","close","close"]);
-
   const openMenu = () => {
-    const menu: HTMLElement | null = document.getElementById("menu");
-    const menu_btn: HTMLElement | null = document.getElementById("menu_btn");
-    const menu_close_btn: HTMLElement | null = document.getElementById("menu_close_btn");
-    const menuList: HTMLCollectionOf<Element> = document.getElementsByClassName("menu");
-  
-    if (menu && menu_btn && menuList && menu_close_btn) {
-      menu_btn.classList.add("close");
-      menu.classList.remove("close");
-      menu_close_btn.classList.remove("close");
-
-      for (let i = 0; i < menuClass.length; i++) {
-        setTimeout(() => {
-          setMenuClass((prevMenuClass) => {
-            const menuClassList = [...prevMenuClass];
-            menuClassList[i] = "open_menu";
-            return menuClassList;
-          });
-        }, 100 * i);
-      }
-    }
+    setOpenBtn(false);
+    setMenu(true);
+    setStart("100%");
+    setEnd("0%");
+    setCloseBtn(true);
   }
 
-  const closeMenu = () => {
-    const menu: HTMLElement | null = document.getElementById("menu");
-    const menu_btn: HTMLElement | null = document.getElementById("menu_btn");
-    const menu_close_btn: HTMLElement | null = document.getElementById("menu_close_btn");
-    const menuList: HTMLCollectionOf<Element> = document.getElementsByClassName("menu");
+  const closeMenu = useCallback(() => {
+    setCloseBtn(false);
+    setStart("0%");
+    setEnd("100%");
+    setTimeout(() => {
+      setMenu(false);
+      setOpenBtn(true);
+    }, 1800);
+  }, []);
 
-    if (menu && menu_btn && menuList && menu_close_btn) {
-      menu_close_btn.classList.add("close");
-      for (let i = menuClass.length-1; i >= 0; i--) {
-        setTimeout(() => {
-          setMenuClass((prevMenuClass) => {
-            const menuClassList = [...prevMenuClass];
-            menuClassList[i] = "close_menu";
-            return menuClassList;
-          });
-        }, 100 * i);
-      }
-      setTimeout(() => {
-        for (let i = 0; i < menuClass.length; i++) {
-          setMenuClass((prevMenuClass) => {
-            const menuClassList = [...prevMenuClass];
-            menuClassList[i] = "close";
-            return menuClassList;
-          });
-        }
-        menu.classList.add("close");
-        menu_btn.classList.remove("close");
-      }, 1400);
-    }
-  }
+  const navDelay: number = 0.25;
+
+  const navAnimationProps = {
+    initial: {
+      x: start,
+    },
+    animate: {
+      x: end,
+      transition: {
+        ease: "easeInOut",
+        duration: 1,
+      },
+    },
+  };
 
   return(
     <div>
@@ -84,99 +65,77 @@ export const Header = () => {
           </div>
 
           <div>
-            <div onClick={openMenu} id="menu_btn" className="menu_open_btn"></div>
+            {openBtn ? (
+              <div onClick={openMenu} className="menu_open_btn">
+                Go
+              </div>
+            ) :
+              null
+            }
           </div>
         </div>
       </header>
 
-      <div id="menu" className="menu_container close">
-        <div
-          onClick={closeMenu}
-          id="menu_close_btn"
-          className="menu_close_btn close"
-        >
-          <b>&#10005;</b>
-        </div>
+      {menu ? (
+        <div className="menu_container">
+
+          {closeBtn ? (
+            <div
+              onClick={closeMenu}
+              className="menu_close_btn"
+            >
+              <b>&#10005;</b>
+            </div>
+          ) :
+          null}
  
-        <div className="menu_wrapper">
-
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-            isActive ? "nav_active" : "nav_pending"
-          }>
-            <div className={`${menuClass[0]} menu`}>
-              <img src={sky_img} alt="Top" />
-              <div
-                onClick={closeMenu}
-                onMouseEnter={handleElHover}
-                onMouseLeave={handleElLeave}
-                className="overlay"
+          <div className="menu_wrapper">
+            <motion.div {...navAnimationProps}>
+              <NavItem
+                link="/"
+                title="TOP"
+                onClickEvent={closeMenu}
               >
-                <b>TOP</b>
-              </div>
-            </div>
-          </NavLink>
+                <img src={sky_img} alt="Top" />
+              </NavItem>
+            </motion.div>
 
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-            isActive ? "nav_active" : "nav_pending"
-          }>
-            <div className={`${menuClass[1]} menu`}>
-              <img src={city_view} alt="About" />
-              <div
-                onClick={closeMenu}
-                onMouseEnter={handleElHover}
-                onMouseLeave={handleElLeave}
-                className="overlay"
+            <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 1, ease: "easeInOut", duration: 1, } }}>
+              <NavItem
+                link="/about"
+                title="ABOUT"
+                onClickEvent={closeMenu}
               >
-                <b>ABOUT</b>
-              </div>
-            </div>
-          </NavLink>
+                <img src={city_view} alt="About" />
+              </NavItem>  
+            </motion.div>
 
-          <NavLink
-            to="/work"
-            className={({ isActive }) =>
-            isActive ? "nav_active" : "nav_pending"
-          }>
-            <div className={`${menuClass[2]} menu`}>
-              <video ref={videoRef} preload="auto" poster={popeye} autoPlay loop muted playsInline >
-                <source src={portfolio_movie} type="video/mp4" />
-                <p className="error_video">Your browser doesn't support HTML5 video.</p>
-              </video>
-              <div
-                onClick={closeMenu}
-                onMouseEnter={handleElHover}
-                onMouseLeave={handleElLeave}
-                className="overlay"
+            <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 2, ease: "easeInOut", duration: 1, } }}>
+              <NavItem
+                link="/work"
+                title="WORK"
+                onClickEvent={closeMenu}
               >
-                <b>WORK</b>
-              </div>
-            </div>
-          </NavLink>
+                <video ref={videoRef} preload="auto" poster={popeye} autoPlay loop muted playsInline >
+                  <source src={portfolio_movie} type="video/mp4" />
+                  <p className="error_video">Your browser doesn't support HTML5 video.</p>
+                </video>
+              </NavItem>
+            </motion.div>
 
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-            isActive ? "nav_active" : "nav_pending"
-          }>
-            <div className={`${menuClass[3]} menu`}>
-              <img src={london_eye_img} alt="Contact" />
-              <div
-                onClick={closeMenu}
-                onMouseEnter={handleElHover}
-                onMouseLeave={handleElLeave}
-                className="overlay"
+            <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 3, ease: "easeInOut", duration: 1, } }}>
+              <NavItem
+                link="/contact"
+                title="CONTACT"
+                onClickEvent={closeMenu}
               >
-                <b>CONTACT</b>
-              </div>
-            </div>
-          </NavLink>
-
-        </div>
-      </div>
+                <img src={london_eye_img} alt="Contact" />
+              </NavItem>
+            </motion.div>
+          </div>
+        </div>)
+        :
+        null}
     </div>
   );
 }

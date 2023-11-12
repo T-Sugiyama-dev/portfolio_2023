@@ -1,3 +1,4 @@
+import React from "react";
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import { Transition } from "../transition/Transition";
 import { Resume } from "./Resume";
@@ -5,13 +6,13 @@ import { Skill } from "./Skill";
 import { Footer } from "../footer/footer";
 import car_body from '../../images/car/car_body.png';
 import tire from '../../images/car/tire.png';
-import './about.css'
+import './about.css';
 
-export const About = () => {
+export const About: React.FC = () => {
   return(
     <div className="about_container">
 
-      <Transition class="transition_about" text="Who I am" />
+      <Transition className="transition_about" text="Who I am" />
 
       <div className="about_wrapper">
         <div className="about_title_wrapper">
@@ -124,9 +125,9 @@ export const About = () => {
 
       </div>
 
-      <Footer class="relative" />
+      <Footer className="relative" />
 
     </div>
   );
-}
+};
 

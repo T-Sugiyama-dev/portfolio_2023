@@ -1,9 +1,9 @@
+import React, { useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import { useRef } from "react";
 import { Career } from "./Career";
 import './resume.css'
 
-export const Resume = () => {
+export const Resume: React.FC = () => {
 
   const [ref, inView]: any = useInView({
     rootMargin: '-100px 0px', // 100px手前でトリガーする

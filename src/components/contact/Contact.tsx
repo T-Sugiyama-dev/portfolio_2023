@@ -1,14 +1,16 @@
+import React from 'react';
 import { Transition } from '../transition/Transition';
 import { Footer } from '../footer/footer';
 import './contact.css'
 import github from '../../images/contact/github.png';
 import linkedin from '../../images/contact/linkedin.png';
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
+
   return(
     <div className="contact_container">
 
-      <Transition class="transition_contact" text="Say Hello!!" />
+      <Transition className="transition_contact" text="Say Hello!!" />
 
       <div className="contact_wrapper">
 
@@ -32,7 +34,7 @@ export const Contact = () => {
 
       </div>
 
-      <Footer class="absolute" />
+      <Footer className="absolute" />
 
     </div>
   );

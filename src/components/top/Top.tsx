@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Chat } from "./Chat";
 import { Transition } from "../transition/Transition";
 import { Footer } from "../footer/footer";
 import './top.css'
 
 const roleList: string[] = [
-  "Photographer",
-  "Software Engineer",
-  "Designer",
-  "Videographer"
+  "photographer",
+  "software engineer",
+  "designer",
+  "videographer"
 ];
 
-export const Top = () => {
+export const Top: React.FC = () => {
   
   const [role, setRole] = useState<string>(roleList[0]);
 
@@ -53,14 +53,14 @@ export const Top = () => {
   return(
     <div className="top_container">
 
-      <Transition class="transition_top" text="Just a second..." />
+      <Transition className="transition_top" text="Just a second..." />
 
       <div className="bubble">
 
         <div className="bubble_wrapper">
 
           <div className="line">
-            <span onMouseEnter={() => moveText(0)} className="square">H</span>
+            <div onMouseEnter={() => moveText(0)} className="square">H</div>
             <div onMouseEnter={() => moveText(1)} className="square">e</div>
             <div onMouseEnter={() => moveText(2)} className="square">l</div>
             <div onMouseEnter={() => moveText(3)} className="square">l</div>
@@ -78,6 +78,8 @@ export const Top = () => {
             <div onMouseEnter={() => moveText(12)} className="square" >'</div>
             <div onMouseEnter={() => moveText(13)} className="square" >m</div>
             <div>　</div>
+            <div onMouseEnter={() => moveText(14)} className="square" > a</div>
+            <div>　</div>
             <div className="roleWrapper">
               <div className="square" id="role" >{role}</div>
             </div>
@@ -88,9 +90,9 @@ export const Top = () => {
 
       <Chat />
 
-      <Footer class="absolute" />
+      <Footer className="absolute" />
       
     </div>
   );
-}
+};
 
