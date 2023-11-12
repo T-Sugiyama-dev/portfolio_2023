@@ -1,5 +1,5 @@
+import React, { useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import { useRef } from "react";
 import { Career } from "./Career";
 import './resume.css'
 

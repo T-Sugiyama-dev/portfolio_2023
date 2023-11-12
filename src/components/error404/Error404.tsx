@@ -1,3 +1,4 @@
+import React from 'react';
 import './error404.css';
 
 export const Error404: React.FC = () => {

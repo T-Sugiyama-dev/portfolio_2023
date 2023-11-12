@@ -1,3 +1,4 @@
+import React from 'react';
 import { Transition } from '../transition/Transition';
 import { Footer } from '../footer/footer';
 import './contact.css'

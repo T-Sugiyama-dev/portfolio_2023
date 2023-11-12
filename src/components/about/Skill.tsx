@@ -1,3 +1,4 @@
+import React from "react";
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
 import { useInView } from "react-intersection-observer";
 import './skill.css'

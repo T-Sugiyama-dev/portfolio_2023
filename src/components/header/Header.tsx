@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { NavItem } from "./NavItem";
 import './header.css'
@@ -8,8 +8,7 @@ import city_view       from '../../images/header/city_view.jpg';
 import popeye          from '../../images/header/popeye.png';
 import portfolio_movie from '../../video/portfolio_movie.mp4';
 
-
-export const Header = () => {
+export const Header: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [openBtn, setOpenBtn]   = useState<boolean>(true);
   const [closeBtn, setCloseBtn] = useState<boolean>(false);

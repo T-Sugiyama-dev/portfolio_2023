@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 import './transition.css';
 
 interface TransitionProp {
@@ -11,7 +10,7 @@ interface TransitionProp {
 export const Transition: React.FC<TransitionProp> = React.memo(({ className, text }) => {
 
   const [transition, setTransition] = useState<boolean>(true);
-  const initialDelay    : number = 1.5;
+  const initialDelay    : number = 1.2;
   const transitionDelay : number = 0.15;
 
   const transitionAnimationProps = {
@@ -31,7 +30,7 @@ export const Transition: React.FC<TransitionProp> = React.memo(({ className, tex
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setTransition(false);
-    }, 3000);
+    }, 2700);
     return () => clearTimeout(timeoutId);
   }, []);
 

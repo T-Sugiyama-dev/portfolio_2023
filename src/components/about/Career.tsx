@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { careerList } from "./Career_desc";
 import './resume.css'

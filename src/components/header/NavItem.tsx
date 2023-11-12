@@ -16,8 +16,6 @@ export const NavItem: React.FC<NavProps> = React.memo(({
   onClickEvent,
   children
 }) => {
-
-  console.log(title);
   return (
     <NavLink
       to={link}

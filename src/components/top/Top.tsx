@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Chat } from "./Chat";
 import { Transition } from "../transition/Transition";
 import { Footer } from "../footer/footer";
@@ -12,7 +11,7 @@ const roleList: string[] = [
   "videographer"
 ];
 
-export const Top:React.FC = () => {
+export const Top: React.FC = () => {
   
   const [role, setRole] = useState<string>(roleList[0]);
 
@@ -61,7 +60,7 @@ export const Top:React.FC = () => {
         <div className="bubble_wrapper">
 
           <div className="line">
-            <span onMouseEnter={() => moveText(0)} className="square">H</span>
+            <div onMouseEnter={() => moveText(0)} className="square">H</div>
             <div onMouseEnter={() => moveText(1)} className="square">e</div>
             <div onMouseEnter={() => moveText(2)} className="square">l</div>
             <div onMouseEnter={() => moveText(3)} className="square">l</div>

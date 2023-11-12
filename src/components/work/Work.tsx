@@ -1,5 +1,5 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { handleElHover, handleElLeave } from "../cursor/Cursor";
-import { useState, useEffect, useRef } from 'react';
 import { Transition } from "../transition/Transition";
 import { Footer } from '../footer/footer';
 import './work.css';
