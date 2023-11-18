@@ -28,8 +28,10 @@ export const Transition: React.FC<TransitionProp> = React.memo(({ className, tex
   };
 
   useEffect(() => {
+    document.body.style.overflowY = "hidden";
     const timeoutId = setTimeout(() => {
       setTransition(false);
+      document.body.style.overflowY = "";
     }, 2700);
     return () => clearTimeout(timeoutId);
   }, []);
