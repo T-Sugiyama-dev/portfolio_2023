@@ -46,8 +46,9 @@
 
 .menu_open_btn {
   background-color: #ee4646;
-  width: 100px;
-  height: 35px;
+  width: 170px;
+  height: 55px;
+  font-size: 20px;
   border-radius: 30px;
   position: absolute;
   right: 5%;
@@ -150,9 +151,10 @@
   }
 
   .menu_open_btn {
-    width: 70px;
+    width: 90px;
     height: 30px;
     border-radius: 30px;
+    font-size: 14px;
   }
 
   .menu_container {

@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [openBtn, setOpenBtn]   = useState<boolean>(true);
   const [closeBtn, setCloseBtn] = useState<boolean>(false);
-  const [menu, setMenu]         = useState<boolean>(false);
+  const [menu, setMenu]         = useState<string>("close");
   const [start, setStart]       = useState<string>("100%");
   const [end, setEnd]           = useState<string>("100%");
 
@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
 
   const openMenu = () => {
     setOpenBtn(false);
-    setMenu(true);
+    setMenu("");
     setStart("100%");
     setEnd("0%");
     setCloseBtn(true);
@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
     setStart("0%");
     setEnd("100%");
     setTimeout(() => {
-      setMenu(false);
+      setMenu("close");
       setOpenBtn(true);
     }, 1800);
   }, []);
@@ -67,7 +67,7 @@ export const Header: React.FC = () => {
           <div>
             {openBtn ? (
               <div onClick={openMenu} className="menu_open_btn">
-                Go
+                Explore
               </div>
             ) :
               null
@@ -76,66 +76,64 @@ export const Header: React.FC = () => {
         </div>
       </header>
 
-      {menu ? (
-        <div className="menu_container">
+      <div className={`menu_container ${menu}`}>
 
-          {closeBtn ? (
-            <div
-              onClick={closeMenu}
-              className="menu_close_btn"
-            >
-              <b>&#10005;</b>
-            </div>
-          ) :
-          null}
- 
-          <div className="menu_wrapper">
-            <motion.div {...navAnimationProps}>
-              <NavItem
-                link="/"
-                title="TOP"
-                onClickEvent={closeMenu}
-              >
-                <img src={sky_img} alt="Top" />
-              </NavItem>
-            </motion.div>
-
-            <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 1, ease: "easeInOut", duration: 1, } }}>
-              <NavItem
-                link="/about"
-                title="ABOUT"
-                onClickEvent={closeMenu}
-              >
-                <img src={city_view} alt="About" />
-              </NavItem>  
-            </motion.div>
-
-            <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 2, ease: "easeInOut", duration: 1, } }}>
-              <NavItem
-                link="/work"
-                title="WORK"
-                onClickEvent={closeMenu}
-              >
-                <video ref={videoRef} preload="auto" poster={popeye} autoPlay loop muted playsInline >
-                  <source src={portfolio_movie} type="video/mp4" />
-                  <p className="error_video">Your browser doesn't support HTML5 video.</p>
-                </video>
-              </NavItem>
-            </motion.div>
-
-            <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 3, ease: "easeInOut", duration: 1, } }}>
-              <NavItem
-                link="/contact"
-                title="CONTACT"
-                onClickEvent={closeMenu}
-              >
-                <img src={london_eye_img} alt="Contact" />
-              </NavItem>
-            </motion.div>
+        {closeBtn ? (
+          <div
+            onClick={closeMenu}
+            className="menu_close_btn"
+          >
+            <b>&#10005;</b>
           </div>
-        </div>)
-        :
+        ) :
         null}
+ 
+        <div className="menu_wrapper">
+          <motion.div {...navAnimationProps}>
+            <NavItem
+              link="/"
+              title="TOP"
+              onClickEvent={closeMenu}
+            >
+              <img src={sky_img} alt="Top" />
+            </NavItem>
+          </motion.div>
+
+          <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 1, ease: "easeInOut", duration: 1, } }}>
+            <NavItem
+              link="/about"
+              title="ABOUT"
+              onClickEvent={closeMenu}
+            >
+              <img src={city_view} alt="About" />
+            </NavItem>  
+          </motion.div>
+
+          <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 2, ease: "easeInOut", duration: 1, } }}>
+            <NavItem
+              link="/work"
+              title="WORK"
+              onClickEvent={closeMenu}
+            >
+              <video ref={videoRef} preload="auto" poster={popeye} autoPlay loop muted playsInline >
+                <source src={portfolio_movie} type="video/mp4" />
+                <p className="error_video">Your browser doesn't support HTML5 video.</p>
+              </video>
+            </NavItem>
+          </motion.div>
+
+          <motion.div {...navAnimationProps} animate={{ ...navAnimationProps.animate, transition: { delay: navDelay * 3, ease: "easeInOut", duration: 1, } }}>
+            <NavItem
+              link="/contact"
+              title="CONTACT"
+              onClickEvent={closeMenu}
+            >
+              <img src={london_eye_img} alt="Contact" />
+            </NavItem>
+          </motion.div>
+
+        </div>
+      </div>
     </div>
   );
 }

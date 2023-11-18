@@ -29,7 +29,18 @@ export const Work: React.FC = () => {
   const [count, setCount] = useState<number>(0);
   const colList: string[] = ["work_1", "work_2", "work_3", "work_4", "work_5", "work_6", "work_7", "work_8", "work_9", "work_10"];
 
+  const closeExWork = () => {
+    const exWorkContent: HTMLCollectionOf<Element> = document.getElementsByClassName("work");
+    if(exWorkContent) {
+      for(let i=0; i<exWorkContent.length; i++) {
+        exWorkContent[i].classList.remove("close");
+        exWorkContent[i].classList.add("close");
+      }
+    }
+  }
+
   const openWork = (col: string) => {
+    closeExWork();
     const workContent: HTMLElement | null = document.getElementById(col);
     if(workContent) {
       workContent.classList.remove("close");
@@ -46,15 +57,7 @@ export const Work: React.FC = () => {
   }
 
   const playWork = () => {
-
-    const exWorkContent: HTMLCollectionOf<Element> = document.getElementsByClassName("work");
-    if(exWorkContent) {
-      for(let i=0; i<exWorkContent.length; i++) {
-        exWorkContent[i].classList.remove("close");
-        exWorkContent[i].classList.add("close");
-      }
-    }
-
+    closeExWork();
     const workContent: HTMLElement | null = document.getElementById(colList[count]);
     if(workContent) {
       workContent.classList.remove("close");
